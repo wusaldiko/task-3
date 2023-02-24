@@ -1,0 +1,105 @@
+.plugin {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 100px;
+}
+
+.plugin-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    margin-bottom: 90px;
+}
+
+.right-sidebar__text {
+    margin: 30px 0;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: #8786AD;
+}
+
+
+.price-card {
+    border: 1px solid #EBEBEB;
+}
+
+.price-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 10px 0px 0px;
+    background: #0FAFE9;
+    padding: 25px 27px;
+}
+
+.price-card__header p {
+    color: #fff;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.price-card__header span {
+    color: #fff;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 39px;
+}
+
+.price-card__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 32px;
+    border: 1px solid #EBEBEB;
+}
+
+.price-card__checkbox {
+    margin-right: 17px;
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+#cxb {
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.price-card__checkbox img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.price {
+    opacity: 1;
+}
+
+#cxb:checked {
+    opacity: 0;
+}
+
+#cxb:checked+img {
+    opacity: 1;
+}
+
+.price-card__text {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 24px;
+    color: #33334F;
+}
+
+#cxb:checked~.price {
+    color: red;
+    opacity: 0;
+}
