@@ -3,7 +3,7 @@
     <main-layer>
       <div class="plugin">
         <div class="plugin-left">
-          <left-sidebar />
+          <left-sidebar :product="product"/>
         </div>
         <div class="plugin-right">
           <right-sidebar />
@@ -53,9 +53,10 @@ export default {
     this.product = await getProductById(this.$route.params["id"]);
     this.plugins = await getPlugins(4);
   },
-  
+  async updated() {
+    this.product = await getProductById(this.$route.params["id"]);
+  }
 };
 </script>
-<style lang="scss" scoped>
-@import url("./module.css");
+<style src="./module.css">
 </style>

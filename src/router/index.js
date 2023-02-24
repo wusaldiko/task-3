@@ -16,13 +16,25 @@ const routes = [
       {
         path: MyAccountRoutes.Dashboard,
         component: import(
-          /* webpackChunkName: "" */ "../views/MyAccount/components/DashboardContent.vue"
+          /* webpackChunkName: "" */ "@/views/MyAccount/components/DashboardContent.vue"
         ),
       },
       {
         path: MyAccountRoutes.Orders,
         component: import(
-          /* webpackChunkName: "" */ "../views/MyAccount/components/OrdersContent.vue"
+          /* webpackChunkName: "" */ "@/views/MyAccount/components/OrdersContent.vue"
+        ),
+      },
+      {
+        path: MyAccountRoutes.Address,
+        component: import(
+          /* webpackChunkName: "" */ "@/views/MyAccount/components/AddressContent.vue"
+        ),
+      },
+      {
+        path: MyAccountRoutes.AccountDetails,
+        component: import(
+          /* webpackChunkName: "" */ "@/views/MyAccount/components/AccountDetailsContent.vue"
         ),
       },
     ],

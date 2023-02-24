@@ -1,7 +1,7 @@
 <template>
   <div class="ad">
     <img
-      src="@/views/Home/images/AdImage/ad.png"
+      src="@/views/Home/images/AdCardImage/ad.png"
       :alt="text"
       class="ad__image"
     />

@@ -13,9 +13,7 @@
         <option value="browse" class="nav__link">IOS</option>
       </select>
       <div class="nav__links">
-        <router-link to="/" class="link nav__link"
-          >All-Exclusive</router-link
-        >
+        <router-link to="/" class="link nav__link">All-Exclusive</router-link>
         <router-link to="/" class="link nav__link">Docs</router-link>
       </div>
     </div>
@@ -44,7 +42,7 @@
           <span>5</span>
         </div>
       </div>
-      <main-button @click="$router.push(MainRoutes.MyAccount)"
+      <main-button @click="$router.push(MainRoutes.MyAccount + '/dashboard')"
         >Account</main-button
       >
     </div>
@@ -64,7 +62,7 @@ export default {
       items: [
         {
           title: "Main",
-          value: "main"
+          value: "main",
         },
         {
           title: "All-Exclusive",

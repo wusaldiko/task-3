@@ -9,7 +9,6 @@
         class="category"
         v-for="{ text, id, imageUrl, path } in list"
         :key="id"
-        :disable="this.activeCategory = id"
         @click="this.activeCategory = id && $router.push(path)"
       >
         <img

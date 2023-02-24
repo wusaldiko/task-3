@@ -1,8 +1,10 @@
 <template scoped>
-  <div class="my-account container">
+  <div class="container">
     <main-layer>
-      <dashboard title="My Profile" :list="categories" />
-      <router-view></router-view>
+      <div class="my-account">
+        <dashboard title="My Profile" :list="categories" />
+        <router-view></router-view>
+      </div>
     </main-layer>
   </div>
 </template>
@@ -10,6 +12,8 @@
 <script>
 import MainLayer from "@/components/Layers/Main.vue";
 import Dashboard from "@/components/Dashboard.vue";
+import { MyAccountRoutes } from "@/router/constants";
+
 
 export default {
   components: { MainLayer, Dashboard },
@@ -19,22 +23,22 @@ export default {
         {
           id: 1,
           text: "Dashboard",
-          path: "my-account/dashboard",
+          path: MyAccountRoutes.Dashboard,
         },
         {
           id: 2,
           text: "Orders",
-          path: "my-account/orders",
+          path: MyAccountRoutes.Orders,
         },
         {
           id: 3,
           text: "Address",
-          path: "my-account/address",
+          path: MyAccountRoutes.Address,
         },
         {
           id: 4,
           text: "Account details",
-          path: "my-account/account-details",
+          path: MyAccountRoutes.AccountDetails,
         },
         {
           id: 5,
@@ -46,3 +50,12 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.my-account {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 20px;
+}
+</style>
